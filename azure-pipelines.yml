@@ -7,7 +7,10 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-2016'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
 
 variables:
   buildConfiguration: 'Release'
